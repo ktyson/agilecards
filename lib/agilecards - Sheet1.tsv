@@ -1,0 +1,38 @@
+id	area	practice	slogan	allies	involves
+1	Thinking	Pair Programming	We help each other succeed.	31,2,35,11,33,37	P
+2	Thinking	Energized Work	We work at a pace that allows us to do our best, most productive work indefinitely.	1,21,23,3,13	cpt
+3	Thinking	Informative Workspace	We are tuned in to the status of our project.		cpt
+4	Thinking	Root-Cause Analysis	We prevent mistakes by fixing our process.		cpt
+5	Thinking	Retrospectives	We continually improve our work habits.		cpt
+6	Collaborating	Trust	We work together effectively and without fear.		cpt
+7	Collaborating	Sit Together	We communicate rapidly and accurately.		cpt
+8	Collaborating	Real Customer Involvement	We understand the goals and frustrations of our customers and end-users.		c
+9	Collaborating	Ubiquitous Language	We understand each other.		P
+10	Collaborating	Stand-Up Meetings	We know what our teammates are doing.		cpt
+11	Collaborating	Coding Standards	We embrace a joint aesthetic.		p
+12	Collaborating	Iteration Demo	We keep it real.		cpT
+13	Collaborating	Reporting	We inspire trust in the team's decisions.		cpt
+14	Releasing	Done Done	We're done when we're production-ready.		CPT
+15	Releasing	No Bugs	We confidently release without a dedicated testing phase.		Cpt
+16	Releasing	Version Control	We keep all of our project artifacts in a single, authoritative place.		cPt
+17	Releasing	Ten-Minute Build	We eliminate build and configuration hassles.		P
+18	Releasing	Continuous Integration	We keep our code ready to ship.		P
+19	Releasing	Collective Code Ownership	We are all responsible for high quality code.		P
+20	Releasing	Documentation	We communicate necessary information effectively.		cp
+21	Planning	Vision	We know why our work is important and how we'll be successful.		C
+22	Planning	Release Planning	We plan for success.		C
+23	Planning	The Planning Game	Our plans take advantage of both business and technology expertise.		cp
+24	Planning	Risk Management	We make and meet long term commitments		cpt
+25	Planning	Iteration Planning	We stop at predetermined, unchangeable time intervals and compare reality to plan.		cP
+26	Planning	Slack	We deliver on our iteration commitments.		p
+27	Planning	Stories	We plan our work in small, customer-centric pieces.		cpt
+28	Planning	Estimating	We provide reliable estimates.		P
+29	Developing	Incremental Requirements	We define requirements in parallel with other work.		CT
+30	Developing	Customer Tests	We implement tricky domain concepts correctly.		CPT
+31	Developing	Test-Driven Development	We produce well-designed, well-tested, and well-factored code in small, verifiable steps.		Pt
+32	Developing	Refactoring	Every day, our code is slightly better than it was the day before.		Pt
+33	Developing	Simple Design	Our design is easy to modify and maintain.		P
+34	Developing	Incremental Design and Architecture	We deliver stories every week without compromising design quality.		P
+35	Developing	Spike Solutions	We perform small, isolated experiments when we need more information.		P
+36	Developing	Performance Optimization	We optimize when there's a proven need.		cP
+37	Developing	Exploratory Testing	We discover surprises and untested conditions		T

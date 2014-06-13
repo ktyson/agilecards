@@ -1,0 +1,176 @@
+body {
+ background: #000;   
+    
+}
+
+#header {
+    
+ color: white;  
+    text-align: center;
+    margin: 30px;
+}
+
+#headerBanner {
+    
+    font-size: 3.5em;
+    font-family: Courier;
+    
+}
+
+#headerIntro, #headerSpans, #headerAttribution {
+    
+    font-size 2.2em;
+    margin: 10px;
+    
+}
+
+#headerSpans span {
+    padding: 10px;
+    margin-right: 6px;
+
+}
+
+
+
+.card {
+    list-style-type: none;   
+    margin: 5px;
+    
+}
+
+
+.zero {
+    background: black;
+    
+    
+}
+
+.one {
+    background: #CCFFFF;
+    
+    
+}
+
+.two {
+    background: #FFFF99;   
+    
+}
+
+.three {
+    background: #99FF99;   
+    
+}
+
+.four {
+    background: #FF9999;   
+    
+}
+
+.area {
+    
+    text-align: center;
+    font-size: 1.2em;
+
+    
+}
+
+.slogan {
+    
+    text-align: center;
+    font-size: 0.9em;  
+    font-style: italic;
+
+}
+
+.Thinking {
+    font-family: Times New Roman;  
+    color: blue;
+}
+
+
+
+.Collaborating {
+    font-family: Patrick Hand;
+    color: brown;
+}
+
+
+.Releasing {
+    font-family: Arial;
+    color: red;
+}
+
+.Planning {
+    font-family: Oxygen;
+    color: purple;
+}
+
+.Developing {
+    font-family: Courier;
+    color: green;
+}
+
+#help {
+ 
+    
+}
+
+#helpText {
+ 
+    width: 700px;
+    height: 200px;
+    overflow: auto;
+    background: #777;
+    color: lightgray;
+    text-align: left;
+    font-family: Arial;
+    font-size: 11pt;
+    
+    
+}
+
+#copypad {
+    
+    width: 700px;
+    height: 200px;    
+    
+}
+
+
+/* Gridster styles */
+.demo {
+    margin: 3em 0;
+    padding: 7.5em 0 5.5em;
+    background: #004756;
+}
+
+.gridster {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.gridster .gs-w {
+    xxbackground: #FFF;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.gridster .player {
+    -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+
+
+.gridster .gs-w.try {
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 37px -169px;
+
+}
+
+.gridster .preview-holder {
+    border: none!important;
+    border-radius: 0!important;
+    background: rgba(255,255,255,.2)!important;
+}

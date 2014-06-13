@@ -1,0 +1,196 @@
+<html>
+<head>
+    
+    <!--
+
+        @author: Karl Tyson, ktyson GitHub
+        @license: open, MIT
+
+    -->
+    <script src="jslib/jquery-2-min.js"></script>
+    <script src="jslib/gridster-min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Patrick+Hand">
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/gridster-min.css">
+    <link rel="stylesheet" type="text/css" href="css/agilecards.css">
+    
+    <script src="agilecards.js"></script>
+    <script>
+        
+        var gridster;
+
+        //ugly globals used for drag info
+        var startClass;
+
+        $(document).ready(function(){
+
+            gridster = $(".gridster > ul").gridster({
+                widget_margins: [5, 5],
+                widget_base_dimensions: [260, 80],
+                min_cols: 4,
+                draggable: {
+                    start: function(event, ui) {
+                        var dataCol = $(ui.$helper).attr("data-col");
+                        startClass = getColFromDataCol(dataCol);                           
+                    },
+                    stop: function(event, ui){ 
+                        var dataCol = $(ui.$helper).attr("data-col");
+                        var newClass = getColFromDataCol(dataCol);
+                        var chgId = $(ui.$helper).attr("id");
+                        $("#"+chgId).removeClass(startClass);
+                        $("#"+chgId).addClass(newClass);
+                    }
+                }
+            }).data('gridster');
+            
+            //initialize cards
+            $.each(cards.Cards, function(i, card){
+                var arrAdd = [writeCardDiv(card, 1), 1, 1, 1, parseInt(card.id)];
+                gridster.add_widget.apply(gridster, arrAdd)
+            });
+
+            //event handlers
+            $(".card").on("dblclick", function() {
+                var id = $(this).attr("id").split("_")[1];
+                var card = getCard(id);
+                var bookHtml = card.practice.toLowerCase().replace(" ","_");
+                window.open("http://www.jamesshore.com/Agile-Book/" + bookHtml + ".html");  
+            });
+               
+            $("#inOut").hide(); //init as hidden
+            
+            $("#getJson").on("click", function(){        
+                $("#help").hide();
+                $("#inOut").show();
+                getSerial();           
+            });
+        
+            $("#setJson").on("click", function(){
+                $("#help").hide();
+                $("#inOut").show();        
+            });
+        
+            $("#done").on("click", function(){           
+                setSerial();
+                $("#inOut").hide();           
+            });
+        
+            $("#help").hide(); //init as hidden
+        
+            $("#getHelp").on("click", function() {
+                $("#inOut").hide();
+                $("#help").show();
+            });
+        
+            $("#doneHelp").on("click", function(){
+                $("#help").hide();        
+            });
+    
+        });
+
+        function getCard(id) {     
+            return cards.Cards[id-1];          
+        }
+        
+        function writeCardDiv(card, col) {
+            var c = [];
+            c.push("<div id='card_" + card.id + "' class='card " + getColFromDataCol(col) + "' >");
+            c.push("<div class='area " + card.area + "'>" + card.practice + "</div>");
+            c.push("<div class='slogan'>" + card.slogan + "</div>");
+            c.push("</div>");          
+            return c.join('');
+        }
+        
+        function getColFromDataCol(col) {
+            
+            dataCol = parseInt(col);           
+            if (dataCol === 1) {
+                return "one"; 
+            }
+            else if (dataCol === 2) {
+                return "two"; 
+            }
+            else if (dataCol === 3) {
+                return "three"; 
+            } else {
+                return "four";  //error shows up as red in wrong col 
+            }            
+        }     
+        
+        function getSerial() {       
+            $("#copypad").val(JSON.stringify(gridster.serialize()));         
+        }
+        
+        function setSerial() {
+  
+            var incoming = $("#copypad").val();          
+            if(incoming.length > 0) {
+                if(confirm("Re-arrange cards based on this Json code?")) { 
+                    gridster.remove_all_widgets();
+                    var arr = JSON.parse(incoming);
+                    $.each(arr, function(idx, val) {
+                        gridster.add_widget(writeCardDiv(getCard(idx+1), val.col), val.size_x, val.size_y, val.col, val.row);
+                    });       
+                }  
+            }            
+        }
+        
+    </script>  
+</head>
+<body>  
+    <div id="header">
+        <div id="headerBanner">The Agile We Use</div>    
+        <div id="headerAreas">= <span class="zero Thinking">Thinking, </span> 
+            <span class="zero Collaborating">Collaborating, </span> 
+            <span class="zero Releasing">Releasing, </span> 
+            <span class="zero Planning">Planning, </span> &amp;  
+            <span class="zero Developing">Developing</span>
+        </div>
+        <div id="headerIntro">The quick and easy way for everyone to see </div> 
+        <div id="headerSpans">    
+            <span class="one Thinking">What's Available, </span> 
+            <span class="two Collaborating">What We Try Out, </span> 
+            <span class="three Developing">What We Practice, </span> 
+            <span class="four Releasing">and What We Don't!</span>
+        </div>
+        <div id="headerAttribution">inspired/informed by 
+            <a href="http://www.jamesshore.com/Agile-Book">The Art of Agile Development</a> by James Shore <br/>(Hint: Start dragging cards around)
+        </div> 
+        <div id="headerButtons">
+            <button id="getJson">Get Json</button>
+            <button id="getHelp">?</button>
+            <button id="setJson">Set Json</button>
+        </div>
+        <div id="help">
+            <textarea id="helpText">
+                
+Problem: We cannot easily see all the common Agile practices and evaluate which ones are currently being used by our team, or should be used or tried, or definitely will not be used.
+                
+Solution: Drag cards into one of four columns: Available (blue), Try-Out (yellow), Practicing (green), or Not Used (red). This activity will make your overall usage of Agile clear to everyone concerned, and help plan any adoption ramp-up you might decide to execute.
+
+Problem: There are so many varieties of Agile, which one should we look at? Which individual practices should we implement?
+                
+Solution: This web page is based on the online book The Art of Agile Development by James Shore, with many links (double click on a card). He covers most, if not all, of the major common practices in XP (eXtreme Programming) and Agile. He provides copious references to other reputable authors, and gives detailed discussions about why you might NOT use a given practice, as well as why you should.
+                
+Problem: We want to capture a particular arrangement of Agile usage from this web page so we can replicate it later, or transfer it to someone else.
+                
+Solution: Copy and paste, in (Set Json) and out (Get Json), using the text area provided. Click Done to process. You must handle the simple text-based json code, which maps a snapshot arrangement of cards. Save the entire text in a file somewhere locally, and then bring it back in to the page when you want to see it again.   
+                                   
+            </textarea>
+            <br/>
+            <button id="doneHelp">Done</button>
+        </div>        
+        <div id="inOut">
+            <textarea id="copypad"></textarea>
+            <br/>
+            <button id="done">Done</button>   
+        </div>        
+    </div>   
+    
+    <div class="gridster"><ul></ul></div>    
+    
+</body>
+</html>
