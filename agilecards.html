@@ -35,14 +35,18 @@
                 draggable: {
                     start: function(event, ui) {
                         var dataCol = $(ui.$helper).attr("data-col");
-                        startClass = getColFromDataCol(dataCol);                           
+                        startClass = getColFromDataCol(dataCol);                           console.log("start",startClass);
                     },
                     stop: function(event, ui){ 
                         var dataCol = $(ui.$helper).attr("data-col");
                         var newClass = getColFromDataCol(dataCol);
                         var chgId = $(ui.$helper).attr("id");
-                        $("#"+chgId).removeClass(startClass);
-                        $("#"+chgId).addClass(newClass);
+                        $("#"+chgId).find(".area").removeClass(startClass);
+                        $("#"+chgId).find(".area").addClass(newClass);
+                        $("#"+chgId).find(".slogan").removeClass(startClass);
+                        $("#"+chgId).find(".slogan").addClass(newClass);
+                        
+                console.log("new",newClass);
                     }
                 }
             }).data('gridster');
@@ -98,9 +102,16 @@
         
         function writeCardDiv(card, col) {
             var c = [];
-            c.push("<div id='card_" + card.id + "' class='card " + getColFromDataCol(col) + "' >");
-            c.push("<div class='area " + card.area + "'>" + card.practice + "</div>");
-            c.push("<div class='slogan'>" + card.slogan + "</div>");
+            c.push("<div id='card_" + card.id + "' class='card' >");
+            
+            c.push("<div class='area " + getColFromDataCol(col) + "'>");
+            
+            c.push("<span class='tab " + card.area + "'>&nbsp;</span>");
+            c.push(card.practice);
+            
+            
+            c.push("</div>");
+            c.push("<div class='slogan " + getColFromDataCol(col) + "'>" + card.slogan + "</div>");
             c.push("</div>");          
             return c.join('');
         }
@@ -147,11 +158,27 @@
         <div id="headerAttribution">inspired/informed by 
             <a href="http://www.jamesshore.com/Agile-Book">The Art of Agile Development</a> by James Shore 
         </div> 
-        <div id="headerAreas">= <span class="zero ThinkingX">Thinking <span class="pipe">|</span> </span> 
-            <span class="zero CollaboratingX">Collaborating <span class="pipe">|</span> </span> 
-            <span class="zero ReleasingX">Releasing <span class="pipe">|</span> </span> 
-            <span class="zero PlanningX">Planning <span class="pipe">|</span> </span>  
-            <span class="zero DevelopingX">Developing</span>
+        <div id="headerAreas"> 
+            
+            <span class="zero ThinkingX">
+            <span class="toptab Thinking">&nbsp;</span>Thinking 
+            </span> 
+            
+            <span class="zero CollaboratingX">
+            <span class="toptab Collaborating">&nbsp;</span>Collaborating 
+            </span> 
+            
+            <span class="zero ReleasingX">
+            <span class="toptab Releasing">&nbsp;</span>Releasing
+            </span> 
+            
+            <span class="zero PlanningX">
+            <span class="toptab Planning">&nbsp;</span>Planning 
+            </span>  
+            
+            <span class="zero DevelopingX">
+            <span class="toptab Developing">&nbsp;</span>Developing
+            </span>
         </div>
         
         <div id="headerButtons">
@@ -167,9 +194,13 @@ Problem: We cannot easily see all the common Agile practices and evaluate which 
                 
 Solution: Drag cards into one of four columns: Available (blue), Try-Out (yellow), Practicing (green), or Not Used (red). This activity will make your overall usage of Agile clear to everyone concerned, and help plan any adoption ramp-up you might decide to execute.
 
+-----
+
 Problem: There are so many varieties of Agile, which one should we look at? Which individual practices should we implement?
                 
 Solution: This web page is based on the online book The Art of Agile Development by James Shore, with many links (double click on a card). He covers most, if not all, of the major common practices in XP (eXtreme Programming) and Agile. He provides copious references to other reputable authors, and gives detailed discussions about why you might NOT use a given practice, as well as why you should.
+
+-----
                 
 Problem: We want to capture a particular arrangement of Agile usage from this web page so we can replicate it later, or transfer it to someone else.
                 

@@ -30,7 +30,7 @@ background: #eee;
 }
 
 #headerAttribution a {
-	text-decoration: none;
+	text-decoration:underline;
 	color: #444;
 	xxfont-weight: bold;
 	font-style: italic;
@@ -91,59 +91,103 @@ background: #eee;
 .card {
     list-style-type: none;   
     margin: 5px;
-    
+    height: 50px;
 }
 
 
 .zero {
     xxbackground: black;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    margin-left: 20px;
+    
+}
+
+.tab {
+    max-height: 10px;
+    max-width: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: solid thin white;
+    background-color: gray;
+    float:left;
     
     
 }
 
-.one {
-    background: #CCFFFF;  
+.toptab {
+
+    border: solid thin white;
+    background-color: gray;
+    xxposition:sticky;
+    max-height: 10px;
+    max-width: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    
+    
+    
 }
 
-.two {
-    background: #FFFF99;    
-}
-
-.three {
-    background: #99FFC3;   
-}
-
-.four {
-    background: #FF9999;   
-}
-
-.oneX {
+.area.one {
     background: #038080;  
 }
 
+.area.two {
+    background: #707002;    
+}
+
+.area.three {
+    background: #015E01;   
+}
+
+.area.four {
+    background: #6E0000;   
+}
+
+.slogan.one {
+    background: #CCFFFF;  
+}
+
+.slogan.two {
+    background: #FFFF99;    
+}
+
+.slogan.three {
+    background: #99FFC3;   
+}
+
+.slogan.four {
+    background: #FF9999; 
+    
+}
+
+.oneX {
+    background: #038080;
+    font-size: 1.2em;
+}
+
 .twoX {
-    background: #707002;   
+    background: #707002;
+    font-size: 1.2em;
     
 }
 
 .threeX {
     background: #015E01;   
-    
+    font-size: 1.2em;
 }
 
 .fourX {
     background: #6E0000;   
-    
+    font-size: 1.2em;
 }
 
 .area {
     
     text-align: center;
     font-size: 1.2em;
-    margin-bottom: 4px;
-    
-
+    margin-top: 4px;
+    color: #FFF;
     
 }
 
@@ -154,6 +198,8 @@ background: #eee;
     font-style: italic;
     padding-left: 5px;
     padding-right: 5px;
+    color: #000;
+    height: 50px;
 
 }
 
@@ -222,10 +268,10 @@ background: #eee;
     width: 700px;
     height: 200px;
     overflow: auto;
-    background: #777;
-    color: lightgray;
+    background: #FFF;
+    color: black;
     text-align: left;
-    font-family: Arial;
+    font-family: Courier;
     font-size: 11pt;
     
     
