@@ -1,33 +1,89 @@
 body {
- background: #000;   
+ background: #222;   
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   margin: 0px;
     
 }
 
 #header {
-    
- color: white;  
     text-align: center;
-    margin: 30px;
+    xxmargin: 30px;
+    
 }
 
 #headerBanner {
     
     font-size: 3.5em;
+    padding: 10px 0 10px 0;
     font-family: Courier;
+    background: #eee;
+     color: #222;  
     
 }
 
-#headerIntro, #headerSpans, #headerAttribution {
+#headerAttribution {
+background: #eee;
+ font-family: Courier;
+ font-size: 0.9em;
+ padding-bottom: 10px;
+}
+
+#headerAttribution a {
+	text-decoration: none;
+	color: #444;
+	xxfont-weight: bold;
+	font-style: italic;
+}
+
+#headerSpans {
+    width: 1080px;
+	margin: 0 auto;
+	xxpadding-left: 20px;
+	padding-left: 130px;
+	background: white;
+}
+
+#headerIntro {
     
+
     font-size 2.2em;
-    margin: 10px;
-    
+    xxfont-weight: bold;
+    color: white;
 }
 
-#headerSpans span {
-    padding: 10px;
-    margin-right: 6px;
+#headerAreas {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 
+#headerSpans div {
+    padding: 10px;
+    float: left;
+    xxmargin-right: 6px;
+    font-weight: bold;
+    	width: 240px !important;
+	height: 20px;
+	margin: 5px;
+	color: white;
+}
+
+#headerButtons {
+	margin-bottom: 10px;
+}
+
+#hint {
+	font-size: 0.8em;
+	color: white;
+	font-style: italic;
+}
+
+.pipe {
+	color: white;
+}
+
+.clear {
+	clear: both;
 }
 
 
@@ -40,29 +96,44 @@ body {
 
 
 .zero {
-    background: black;
+    xxbackground: black;
+    font-size: 1.2em;
     
     
 }
 
 .one {
-    background: #CCFFFF;
-    
-    
+    background: #CCFFFF;  
 }
 
 .two {
-    background: #FFFF99;   
-    
+    background: #FFFF99;    
 }
 
 .three {
-    background: #99FF99;   
-    
+    background: #99FFC3;   
 }
 
 .four {
     background: #FF9999;   
+}
+
+.oneX {
+    background: #038080;  
+}
+
+.twoX {
+    background: #707002;   
+    
+}
+
+.threeX {
+    background: #015E01;   
+    
+}
+
+.fourX {
+    background: #6E0000;   
     
 }
 
@@ -70,6 +141,8 @@ body {
     
     text-align: center;
     font-size: 1.2em;
+    margin-bottom: 4px;
+    
 
     
 }
@@ -79,35 +152,64 @@ body {
     text-align: center;
     font-size: 0.9em;  
     font-style: italic;
+    padding-left: 5px;
+    padding-right: 5px;
 
+}
+
+.ThinkingX {
+    xxfont-family: Times New Roman;  
+    color: #218AC2;
+}
+
+.CollaboratingX {
+    xxfont-family: Patrick Hand;
+    color: #D46C11;
+}
+
+.ReleasingX {
+  xx font-family: 'Playfair Display', serif;
+    color: #D41111;
+}
+
+.PlanningX {
+    xxfont-family: Oxygen;
+    color: #C111D4;
+}
+
+.DevelopingX {
+    xxfont-family: Courier;
+    color: #11BD2B;
 }
 
 .Thinking {
-    font-family: Times New Roman;  
-    color: blue;
+    xxfont-family: Times New Roman;  
+    color: #fff;
+    background: #218AC2;
 }
-
-
 
 .Collaborating {
-    font-family: Patrick Hand;
-    color: brown;
+    xxfont-family: Patrick Hand;
+    color: #fff;
+    background: #D46C11;
 }
 
-
 .Releasing {
-    font-family: Arial;
-    color: red;
+    xxfont-family: 'Playfair Display', serif;
+    color: #fff;
+    background: #D41111;
 }
 
 .Planning {
-    font-family: Oxygen;
-    color: purple;
+    xxfont-family: Oxygen;
+    color: #fff;
+    background: #C111D4;
 }
 
 .Developing {
-    font-family: Courier;
-    color: green;
+    xxfont-family: Courier;
+    color: #fff;
+    background: #11BD2B;
 }
 
 #help {

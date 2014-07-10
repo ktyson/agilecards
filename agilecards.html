@@ -10,8 +10,9 @@
     <script src="jslib/jquery-2-min.js"></script>
     <script src="jslib/gridster-min.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen">
+    <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oxygen">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Patrick+Hand">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>-->
     
     
     <link rel="stylesheet" type="text/css" href="css/gridster-min.css">
@@ -143,27 +144,22 @@
 <body>  
     <div id="header">
         <div id="headerBanner">The Agile We Use</div>    
-        <div id="headerAreas">= <span class="zero Thinking">Thinking, </span> 
-            <span class="zero Collaborating">Collaborating, </span> 
-            <span class="zero Releasing">Releasing, </span> 
-            <span class="zero Planning">Planning, </span> &amp;  
-            <span class="zero Developing">Developing</span>
-        </div>
-        <div id="headerIntro">The quick and easy way for everyone to see </div> 
-        <div id="headerSpans">    
-            <span class="one Thinking">What's Available, </span> 
-            <span class="two Collaborating">What We Try Out, </span> 
-            <span class="three Developing">What We Practice, </span> 
-            <span class="four Releasing">and What We Don't!</span>
-        </div>
         <div id="headerAttribution">inspired/informed by 
-            <a href="http://www.jamesshore.com/Agile-Book">The Art of Agile Development</a> by James Shore <br/>(Hint: Start dragging cards around)
+            <a href="http://www.jamesshore.com/Agile-Book">The Art of Agile Development</a> by James Shore 
         </div> 
+        <div id="headerAreas">= <span class="zero ThinkingX">Thinking <span class="pipe">|</span> </span> 
+            <span class="zero CollaboratingX">Collaborating <span class="pipe">|</span> </span> 
+            <span class="zero ReleasingX">Releasing <span class="pipe">|</span> </span> 
+            <span class="zero PlanningX">Planning <span class="pipe">|</span> </span>  
+            <span class="zero DevelopingX">Developing</span>
+        </div>
+        
         <div id="headerButtons">
             <button id="getJson">Get Json</button>
             <button id="getHelp">?</button>
             <button id="setJson">Set Json</button>
         </div>
+       
         <div id="help">
             <textarea id="helpText">
                 
@@ -187,10 +183,26 @@ Solution: Copy and paste, in (Set Json) and out (Get Json), using the text area 
             <textarea id="copypad"></textarea>
             <br/>
             <button id="done">Done</button>   
-        </div>        
+        </div>  
+        
+        <div id="headerIntro">The quick and easy way for everyone to see:</div>
+         <div id="hint">(Hint: Start dragging cards around)</div>
+        <div id="headerSpans">    
+            <div class="oneX">What's Available </div> 
+            <div class="twoX">What We Try Out </div> 
+            <div class="threeX">What We Practice </div> 
+            <div class="fourX">What We Don't</div>
+        </div>
+        <div class="clear"></div>
+        
+      
     </div>   
     
-    <div class="gridster"><ul></ul></div>    
+ 
+    
+    <div class="gridster">
+    <ul></ul>
+    </div>    
     
 </body>
 </html>
