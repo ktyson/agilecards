@@ -1,1 +1,17 @@
+ToDo:
+
+*Formatting: get column heads to line up, clean up CSS messiness of getting better formatting implemented
+
+*Refine the Done button code - it has glitches
+
+*Add specific url to the base data json - rather than auto-gen the url from chapter headings
+
+
+*Trigger to Highlight related cards: I want to make a very easy way for users to see the book's categorizations and inter-relations of the agile practices, specifically "Area" (thinking, collaborating, etc), "Allies" (practices that support one another, and "Affected" (customers, coders, testers - major or minor). Made a start with the Area color-coding but I dont like it. What I am aiming at is a listing at the top, which, when clicked, based on context, makes a clear highlight of all the applicable cards under that relationship. 
+
+*Single paragraph desc: I also want to introduce an intermediate step between clicking the card and going to the full book chapter. In this step, the user would see a popover that would have a single paragraph describing what the practice is, extracted from your book, to enhance the speed at which app can be used.
+
+
+Sample Json file (shows the profile of the company I was working at when I made the first cut of agilecards)
+
 [{"col":4,"row":27,"size_x":1,"size_y":1},{"col":3,"row":4,"size_x":1,"size_y":1},{"col":4,"row":11,"size_x":1,"size_y":1},{"col":3,"row":6,"size_x":1,"size_y":1},{"col":4,"row":23,"size_x":1,"size_y":1},{"col":4,"row":7,"size_x":1,"size_y":1},{"col":4,"row":24,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":1,"size_y":1},{"col":3,"row":3,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":1,"size_y":1},{"col":3,"row":7,"size_x":1,"size_y":1},{"col":4,"row":30,"size_x":1,"size_y":1},{"col":4,"row":29,"size_x":1,"size_y":1},{"col":4,"row":28,"size_x":1,"size_y":1},{"col":4,"row":26,"size_x":1,"size_y":1},{"col":3,"row":5,"size_x":1,"size_y":1},{"col":4,"row":25,"size_x":1,"size_y":1},{"col":4,"row":13,"size_x":1,"size_y":1},{"col":4,"row":22,"size_x":1,"size_y":1},{"col":4,"row":2,"size_x":1,"size_y":1},{"col":3,"row":2,"size_x":1,"size_y":1},{"col":4,"row":21,"size_x":1,"size_y":1},{"col":4,"row":20,"size_x":1,"size_y":1},{"col":4,"row":18,"size_x":1,"size_y":1},{"col":4,"row":19,"size_x":1,"size_y":1},{"col":4,"row":6,"size_x":1,"size_y":1},{"col":4,"row":17,"size_x":1,"size_y":1},{"col":4,"row":16,"size_x":1,"size_y":1},{"col":4,"row":15,"size_x":1,"size_y":1},{"col":4,"row":14,"size_x":1,"size_y":1},{"col":4,"row":5,"size_x":1,"size_y":1},{"col":4,"row":3,"size_x":1,"size_y":1},{"col":4,"row":12,"size_x":1,"size_y":1},{"col":4,"row":10,"size_x":1,"size_y":1},{"col":4,"row":8,"size_x":1,"size_y":1},{"col":4,"row":4,"size_x":1,"size_y":1},{"col":4,"row":9,"size_x":1,"size_y":1}]
