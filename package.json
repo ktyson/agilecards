@@ -2,7 +2,7 @@
   "name": "agilecards",
   "subdomain": "ktys-agilecards",
   "scripts": {
-    "start": "node server.js"
+    "start": "node serveAgilecards.js"
   },
   "version": "0.0.0-1",
   "engines": {
